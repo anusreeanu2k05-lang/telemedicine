@@ -1,0 +1,460 @@
+{#<!DOCTYPE html>#}
+{#<html>#}
+{#<head>#}
+{#	<title></title>#}
+{#</head>#}
+{#<body>#}
+{#<form method="post">#}
+{#    {% csrf_token %}#}
+{#	<center>#}
+{#		<h1>POST ALERT</h1>#}
+{#		<table>#}
+{#			<tr>#}
+{#				<td>USER:</td>#}
+{#				<td><input type ="text" name="user"></td>#}
+{#			</tr>#}
+{#			<tr>#}
+{#				<td>ALERT:</td>#}
+{#				<td><input type="text" name="ALERT"></td>#}
+{#			</tr>#}
+{#			<tr>#}
+{#				<td>DATE:</td>#}
+{#				<td><input type="date" name="date"></td>#}
+{#			</tr>#}
+{#			<tr>#}
+{#				<td>TIME:</td>#}
+{#				<td><input type="time" name="time"></td>#}
+{#			</tr>#}
+{#			<tr>#}
+{#				<td><input type="submit" value="submit"></td>#}
+{#			</tr>#}
+{#		</table>#}
+{#	</center>#}
+{#</form>#}
+{#</body>#}
+{#</html>#}
+
+
+
+
+
+{#<!DOCTYPE html>#}
+{#<html>#}
+{#<head>#}
+{#  <title>Post Alert</title>#}
+{##}
+{#  <!-- ======= CSS Styling (Medilab Color Theme) ======= -->#}
+{#  <style>#}
+{#    body {#}
+{#      margin: 0;#}
+{#      font-family: "Poppins", Arial, sans-serif;#}
+{#      background-color: #f1f7fd;#}
+{#    }#}
+{##}
+{#    /* Navbar */#}
+{#    .navbar {#}
+{#      background-color: #1977cc;#}
+{#      padding: 15px 30px;#}
+{#      display: flex;#}
+{#      align-items: center;#}
+{#    }#}
+{##}
+{#    .navbar a {#}
+{#      color: #fff;#}
+{#      text-decoration: none;#}
+{#      font-size: 16px;#}
+{#      font-weight: 500;#}
+{#      padding: 8px 14px;#}
+{#      border: 1px solid #fff;#}
+{#      border-radius: 4px;#}
+{#    }#}
+{##}
+{#    .navbar a:hover {#}
+{#      background-color: #fff;#}
+{#      color: #1977cc;#}
+{#    }#}
+{##}
+{#    /* Form Card */#}
+{#    .form-container {#}
+{#      margin-top: 60px;#}
+{#      display: flex;#}
+{#      justify-content: center;#}
+{#    }#}
+{##}
+{#    .card {#}
+{#      background: #ffffff;#}
+{#      padding: 30px 40px;#}
+{#      border-radius: 8px;#}
+{#      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);#}
+{#    }#}
+{##}
+{#    h1 {#}
+{#      color: #1977cc;#}
+{#      margin-bottom: 25px;#}
+{#    }#}
+{##}
+{#    table td {#}
+{#      padding: 10px;#}
+{#      font-size: 15px;#}
+{#    }#}
+{##}
+{#    input[type="text"],#}
+{#    input[type="date"],#}
+{#    input[type="time"] {#}
+{#      width: 220px;#}
+{#      padding: 7px;#}
+{#      border: 1px solid #ccc;#}
+{#      border-radius: 4px;#}
+{#    }#}
+{##}
+{#    input[type="submit"] {#}
+{#      background-color: #1977cc;#}
+{#      color: #fff;#}
+{#      border: none;#}
+{#      padding: 8px 25px;#}
+{#      border-radius: 4px;#}
+{#      cursor: pointer;#}
+{#      font-size: 15px;#}
+{#    }#}
+{##}
+{#    input[type="submit"]:hover {#}
+{#      background-color: #145ca3;#}
+{#    }#}
+{#  </style>#}
+{#</head>#}
+{##}
+{#<body>#}
+{##}
+{#<!-- ======= Navbar ======= -->#}
+{#<div class="navbar">#}
+{#  <a href="/temp/user/">← Back to Home</a>#}
+{#</div>#}
+{##}
+{#<!-- ======= Form Section ======= -->#}
+{#<div class="form-container">#}
+{#  <div class="card">#}
+{##}
+{#    <!-- ===== YOUR ORIGINAL FORM (UNCHANGED) ===== -->#}
+{#    <form method="post">#}
+{#        {% csrf_token %}#}
+{#      <center>#}
+{#        <h1>POST ALERT</h1>#}
+{#        <table>#}
+{#          <tr>#}
+{#            <td>USER:</td>#}
+{#            <td><input type ="text" name="user" required></td>#}
+{#          </tr>#}
+{#          <tr>#}
+{#            <td>ALERT:</td>#}
+{#            <td><input type="text" name="ALERT" required></td>#}
+{#          </tr>#}
+{#          <tr>#}
+{#            <td>DATE:</td>#}
+{#            <td><input type="date" name="date" required></td>#}
+{#          </tr>#}
+{#          <tr>#}
+{#            <td>TIME:</td>#}
+{#            <td><input type="time" name="time" required></td>#}
+{#          </tr>#}
+{#          <tr>#}
+{#            <td><input type="submit" value="submit"></td>#}
+{#          </tr>#}
+{#        </table>#}
+{#      </center>#}
+{#    </form>#}
+{#    <!-- ===== END FORM ===== -->#}
+{##}
+{#  </div>#}
+{#</div>#}
+{##}
+{#</body>#}
+{#</html>#}
+
+
+
+
+{#<!DOCTYPE html>#}
+{#<html>#}
+{#<head>#}
+{#  <title>Post Alert</title>#}
+{##}
+{#  <!-- ======= CSS Styling (Medilab Color Theme) ======= -->#}
+{#  <style>#}
+{#    body {#}
+{#      margin: 0;#}
+{#      font-family: "Poppins", Arial, sans-serif;#}
+{#      background-color: #f1f7fd;#}
+{#    }#}
+{##}
+{#    /* Navbar */#}
+{#    .navbar {#}
+{#      background-color: #1977cc;#}
+{#      padding: 15px 30px;#}
+{#      display: flex;#}
+{#      align-items: center;#}
+{#    }#}
+{##}
+{#    .navbar a {#}
+{#      color: #fff;#}
+{#      text-decoration: none;#}
+{#      font-size: 16px;#}
+{#      font-weight: 500;#}
+{#      padding: 8px 14px;#}
+{#      border: 1px solid #fff;#}
+{#      border-radius: 4px;#}
+{#    }#}
+{##}
+{#    .navbar a:hover {#}
+{#      background-color: #fff;#}
+{#      color: #1977cc;#}
+{#    }#}
+{##}
+{#    /* Form Card */#}
+{#    .form-container {#}
+{#      margin-top: 60px;#}
+{#      display: flex;#}
+{#      justify-content: center;#}
+{#    }#}
+{##}
+{#    .card {#}
+{#      background: #ffffff;#}
+{#      padding: 30px 40px;#}
+{#      border-radius: 8px;#}
+{#      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);#}
+{#    }#}
+{##}
+{#    h1 {#}
+{#      color: #1977cc;#}
+{#      margin-bottom: 25px;#}
+{#    }#}
+{##}
+{#    table td {#}
+{#      padding: 10px;#}
+{#      font-size: 15px;#}
+{#    }#}
+{##}
+{#    input[type="text"],#}
+{#    input[type="date"],#}
+{#    input[type="time"] {#}
+{#      width: 220px;#}
+{#      padding: 7px;#}
+{#      border: 1px solid #ccc;#}
+{#      border-radius: 4px;#}
+{#    }#}
+{##}
+{#    input[type="submit"] {#}
+{#      background-color: #1977cc;#}
+{#      color: #fff;#}
+{#      border: none;#}
+{#      padding: 8px 25px;#}
+{#      border-radius: 4px;#}
+{#      cursor: pointer;#}
+{#      font-size: 15px;#}
+{#    }#}
+{##}
+{#    input[type="submit"]:hover {#}
+{#      background-color: #145ca3;#}
+{#    }#}
+{#  </style>#}
+{#</head>#}
+{##}
+{#<body>#}
+{##}
+{#<!-- ======= Navbar ======= -->#}
+{#<div class="navbar">#}
+{#  <a href="/temp/user/">← Back to Home</a>#}
+{#</div>#}
+{##}
+{#<!-- ======= Form Section ======= -->#}
+{#<div class="form-container">#}
+{#  <div class="card">#}
+{##}
+{#    <!-- ===== YOUR ORIGINAL FORM (UNCHANGED STRUCTURE) ===== -->#}
+{#    <form method="post">#}
+{#        {% csrf_token %}#}
+{#      <center>#}
+{#        <h1>POST ALERT</h1>#}
+{#        <table>#}
+{#          <!-- USER: letters and numbers only, min 3 chars -->#}
+{#          <tr>#}
+{#            <td>USER:</td>#}
+{#            <td>#}
+{#              <input type="text" name="user" required#}
+{#                     pattern="[A-Za-z0-9 ]{3,}"#}
+{#                     title="User must contain at least 3 letters or numbers">#}
+{#            </td>#}
+{#          </tr>#}
+{##}
+{#          <!-- ALERT: letters, numbers, spaces, special chars allowed, min 5 chars -->#}
+{#          <tr>#}
+{#            <td>ALERT:</td>#}
+{#            <td>#}
+{#              <input type="text" name="ALERT" required#}
+{#                     pattern=".{5,}"#}
+{#                     title="Alert must contain at least 5 characters">#}
+{#            </td>#}
+{#          </tr>#}
+{#          <tr>#}
+{#            <td><input type="submit" value="submit"></td>#}
+{#          </tr>#}
+{#        </table>#}
+{#      </center>#}
+{#    </form>#}
+{#    <!-- ===== END FORM ===== -->#}
+{##}
+{#  </div>#}
+{#</div>#}
+{##}
+{#</body>#}
+{#</html>#}
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Post Alert</title>
+
+  <!-- ======= CSS Styling (Medilab Color Theme) ======= -->
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      background-color: #f1f7fd;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #1977cc;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 8px 14px;
+      border: 1px solid #fff;
+      border-radius: 4px;
+    }
+
+    .navbar a:hover {
+      background-color: #fff;
+      color: #1977cc;
+    }
+
+    /* Form Card */
+    .form-container {
+      margin-top: 60px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 30px 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #1977cc;
+      margin-bottom: 25px;
+    }
+
+    table td {
+      padding: 10px;
+      font-size: 15px;
+    }
+
+    input[type="text"] {
+      width: 220px;
+      padding: 7px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      background-color: #1977cc;
+      color: #fff;
+      border: none;
+      padding: 8px 25px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #145ca3;
+    }
+
+    /* Success message styling */
+    .success-message {
+      color: black;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ======= Navbar ======= -->
+<div class="navbar">
+  <a href="/temp/user/">← Back to Home</a>
+</div>
+
+<!-- ======= Form Section ======= -->
+<div class="form-container">
+  <div class="card">
+
+    <!-- ===== YOUR ORIGINAL FORM (UNCHANGED STRUCTURE) ===== -->
+    <form method="post">
+        {% csrf_token %}
+      <center>
+        <h1>POST ALERT</h1>
+
+        <!-- Success Message -->
+        {% if success %}
+          <div class="success-message">Alert Submitted Successfully!</div>
+        {% endif %}
+
+        <table>
+          <!-- USER: letters and numbers only, min 3 chars -->
+          <tr>
+            <td>USER:</td>
+            <td>
+              <input type="text" name="user" required
+                     pattern="[A-Za-z0-9 ]{3,}"
+                     title="User must contain at least 3 letters or numbers">
+            </td>
+          </tr>
+
+          <!-- ALERT: letters, numbers, spaces, special chars allowed, min 5 chars -->
+          <tr>
+            <td>ALERT:</td>
+            <td>
+              <input type="text" name="ALERT" required
+                     pattern=".{5,}"
+                     title="Alert must contain at least 5 characters">
+            </td>
+          </tr>
+
+          <!-- Submit -->
+          <tr>
+            <td><input type="submit" value="submit"></td>
+          </tr>
+        </table>
+      </center>
+    </form>
+    <!-- ===== END FORM ===== -->
+
+  </div>
+</div>
+
+</body>
+</html>

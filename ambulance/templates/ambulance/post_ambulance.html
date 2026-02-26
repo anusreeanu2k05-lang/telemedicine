@@ -1,0 +1,296 @@
+{#<!DOCTYPE html>#}
+{#<html>#}
+{#<head>#}
+{#	<title></title>#}
+{#</head>#}
+{#<body>#}
+{#<form method="post">#}
+{#    {%csrf_token %}#}
+{#	<center>#}
+{#		<h1>POST AMBULANCE</h1>#}
+{#		<table>#}
+{#			<tr>#}
+{#				<td>NAME:</td>#}
+{#				<td><input type ="text" name="user"></td>#}
+{#			</tr>#}
+{#			<tr>#}
+{#				<td>CONTACT:</td>#}
+{#				<td><input type="number" name="CONTACT"></td>#}
+{#			</tr>#}
+{#			<tr>#}
+{#				<td><input type="submit" value="submit"></td>#}
+{#			</tr>#}
+{#		</table>#}
+{#	</center>#}
+{#</form>#}
+{#</body>#}
+{#</html>#}
+
+
+
+{#<!DOCTYPE html>#}
+{#<html>#}
+{#<head>#}
+{#	<title>Post Ambulance</title>#}
+{##}
+{#	<style>#}
+{#		body {#}
+{#			margin: 0;#}
+{#			font-family: "Poppins", Arial, sans-serif;#}
+{#			background-color: #f1f7fd;#}
+{#		}#}
+{##}
+{#		/* Navbar */#}
+{#		.navbar {#}
+{#			background-color: #1977cc;#}
+{#			padding: 15px 30px;#}
+{#			display: flex;#}
+{#			align-items: center;#}
+{#		}#}
+{##}
+{#		.navbar a {#}
+{#			color: #ffffff;#}
+{#			text-decoration: none;#}
+{#			font-size: 16px;#}
+{#			font-weight: 500;#}
+{#			padding: 8px 14px;#}
+{#			border: 1px solid #ffffff;#}
+{#			border-radius: 4px;#}
+{#		}#}
+{##}
+{#		.navbar a:hover {#}
+{#			background-color: #ffffff;#}
+{#			color: #1977cc;#}
+{#		}#}
+{##}
+{#		/* Card */#}
+{#		.container {#}
+{#			margin-top: 60px;#}
+{#			display: flex;#}
+{#			justify-content: center;#}
+{#		}#}
+{##}
+{#		.card {#}
+{#			background-color: #ffffff;#}
+{#			padding: 30px 40px;#}
+{#			border-radius: 8px;#}
+{#			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);#}
+{#		}#}
+{##}
+{#		h1 {#}
+{#			color: #1977cc;#}
+{#			margin-bottom: 25px;#}
+{#		}#}
+{##}
+{#		table td {#}
+{#			padding: 10px;#}
+{#			font-size: 15px;#}
+{#		}#}
+{##}
+{#		input[type="text"],#}
+{#		input[type="number"] {#}
+{#			width: 220px;#}
+{#			padding: 7px;#}
+{#			border: 1px solid #ccc;#}
+{#			border-radius: 4px;#}
+{#		}#}
+{##}
+{#		input[type="submit"] {#}
+{#			background-color: #1977cc;#}
+{#			color: #ffffff;#}
+{#			border: none;#}
+{#			padding: 8px 25px;#}
+{#			border-radius: 4px;#}
+{#			cursor: pointer;#}
+{#			font-size: 15px;#}
+{#		}#}
+{##}
+{#		input[type="submit"]:hover {#}
+{#			background-color: #145ca3;#}
+{#		}#}
+{#	</style>#}
+{#</head>#}
+{##}
+{#<body>#}
+{##}
+{#<!-- ===== Navbar ===== -->#}
+{#<div class="navbar">#}
+{#	<a href="/temp/admin/">← Back to Home</a>#}
+{#</div>#}
+{##}
+{#<!-- ===== Form Section ===== -->#}
+{#<div class="container">#}
+{#	<div class="card">#}
+{##}
+{#		<!-- ===== YOUR ORIGINAL FORM (UNCHANGED) ===== -->#}
+{#		<form method="post">#}
+{#		    {%csrf_token %}#}
+{#			<center>#}
+{#				<h1>POST AMBULANCE</h1>#}
+{#				<table>#}
+{#					<tr>#}
+{#						<td>NAME:</td>#}
+{#						<td><input type ="text" name="user" required></td>#}
+{#					</tr>#}
+{#					<tr>#}
+{#						<td>CONTACT:</td>#}
+{#						<td><input type="tel" name="CONTACT" required></td>#}
+{#					</tr>#}
+{#					<tr>#}
+{#						<td><input type="submit" value="submit"></td>#}
+{#					</tr>#}
+{#				</table>#}
+{#			</center>#}
+{#		</form>#}
+{#		<!-- ===== END FORM ===== -->#}
+{##}
+{#	</div>#}
+{#</div>#}
+{##}
+{#</body>#}
+{#</html>#}
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Post Ambulance</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      background-color: #f1f7fd;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #1977cc;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 8px 14px;
+      border: 1px solid #ffffff;
+      border-radius: 4px;
+    }
+
+    .navbar a:hover {
+      background-color: #ffffff;
+      color: #1977cc;
+    }
+
+    /* Form Card */
+    .container {
+      margin-top: 60px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #ffffff;
+      padding: 30px 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #1977cc;
+      margin-bottom: 25px;
+    }
+
+    table td {
+      padding: 10px;
+      font-size: 15px;
+    }
+
+    input[type="text"],
+    input[type="tel"] {
+      width: 220px;
+      padding: 7px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      background-color: #1977cc;
+      color: #ffffff;
+      border: none;
+      padding: 8px 25px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #145ca3;
+    }
+
+    /* Success Message - same style as Post Alert page */
+    .success-message {
+      color: black;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ===== Navbar ===== -->
+<div class="navbar">
+  <a href="/temp/admin/">← Back to Home</a>
+</div>
+
+<!-- ===== Form Section ===== -->
+<div class="container">
+  <div class="card">
+
+    <form method="post">
+        {% csrf_token %}
+
+      <center>
+        <h1>POST AMBULANCE</h1>
+
+        <!-- Success Message -->
+        {% if success %}
+          <div class="success-message">Submitted Successfully!</div>
+        {% endif %}
+
+        <table>
+          <tr>
+            <td>NAME:</td>
+            <td>
+              <input type="text" name="user" required>
+            </td>
+          </tr>
+          <tr>
+            <td>CONTACT:</td>
+            <td>
+              <input type="tel" name="CONTACT" required
+                     pattern="[0-9]{10}"
+                     title="Contact must be exactly 10 digits">
+            </td>
+          </tr>
+          <tr>
+            <td><input type="submit" value="submit"></td>
+          </tr>
+        </table>
+      </center>
+    </form>
+
+  </div>
+</div>
+
+</body>
+</html>

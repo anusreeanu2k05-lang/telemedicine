@@ -1,0 +1,152 @@
+{#<!DOCTYPE html>#}
+{#<html>#}
+{#<head>#}
+{#	<title></title>#}
+{#</head>#}
+{#<body>#}
+{#<form>#}
+{#	<center>#}
+{#		<h1>VIEW ALERT</h1>#}
+{#		<table border="5">#}
+{#			<tr>#}
+{#				<th>User</th>#}
+{#				<th>Alert</th>#}
+{#				<th>Date</th>#}
+{#				<th>Time</th>#}
+{#			</tr>#}
+{#            {% for i in ok %}#}
+{#			<tr>#}
+{#				<td>{{ i.user_id }}</td>#}
+{#				<td>{{ i.alert }}</td>#}
+{#				<td>{{ i.date }}</td>#}
+{#				<td>{{ i.time }}</td>#}
+{#			</tr>#}
+{#            {% endfor %}#}
+{#		</table>#}
+{#	</center>#}
+{#</form>#}
+{#</body>#}
+{#</html>#}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>View Alert</title>
+
+	<style>
+		body {
+			margin: 0;
+			font-family: "Poppins", Arial, sans-serif;
+			background-color: #f1f7fd;
+		}
+
+		/* Navbar */
+		.navbar {
+			background-color: #1977cc;
+			padding: 15px 30px;
+			display: flex;
+			align-items: center;
+		}
+
+		.navbar a {
+			color: #ffffff;
+			text-decoration: none;
+			font-size: 16px;
+			font-weight: 500;
+			padding: 8px 14px;
+			border: 1px solid #ffffff;
+			border-radius: 4px;
+		}
+
+		.navbar a:hover {
+			background-color: #ffffff;
+			color: #1977cc;
+		}
+
+		/* Card */
+		.container {
+			margin-top: 60px;
+			display: flex;
+			justify-content: center;
+		}
+
+		.card {
+			background-color: #ffffff;
+			padding: 30px 40px;
+			border-radius: 8px;
+			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+		}
+
+		h1 {
+			color: #1977cc;
+			margin-bottom: 25px;
+		}
+
+		/* Table Styling */
+		table {
+			border-collapse: collapse;
+			min-width: 500px;
+		}
+
+		th {
+			background-color: #1977cc;
+			color: #ffffff;
+			padding: 10px;
+			font-size: 15px;
+		}
+
+		td {
+			padding: 10px;
+			font-size: 14px;
+			text-align: center;
+			border: 1px solid #1977cc;
+		}
+
+		tr:nth-child(even) {
+			background-color: #f1f7fd;
+		}
+	</style>
+</head>
+
+<body>
+
+<!-- ===== Navbar ===== -->
+<div class="navbar">
+	<a href="/temp/admin/">← Back to Home</a>
+</div>
+
+<!-- ===== Content ===== -->
+<div class="container">
+	<div class="card">
+
+		<!-- ===== YOUR ORIGINAL CODE (UNCHANGED) ===== -->
+		<form>
+			<center>
+				<h1>VIEW ALERT</h1>
+				<table border="5">
+					<tr>
+						<th>User</th>
+						<th>Alert</th>
+						<th>Date</th>
+						<th>Time</th>
+					</tr>
+		            {% for i in ok %}
+					<tr>
+						<td>{{ i.user.user_name }}</td>
+						<td>{{ i.alert }}</td>
+						<td>{{ i.date }}</td>
+						<td>{{ i.time }}</td>
+					</tr>
+		            {% endfor %}
+				</table>
+			</center>
+		</form>
+		<!-- ===== END ===== -->
+
+	</div>
+</div>
+
+</body>
+</html>
